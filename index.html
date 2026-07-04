@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="music/lagu.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Tombol Kontrol Musik -->
+    <button id="music-btn" class="hidden">🎵 Pause</button>
+
+    <!-- Halaman Cover -->
+    <section id="cover">
+        <div class="cover-content">
+            <h1 class="title-font">❤️ Happy Anniversary ❤️</h1>
+            <p class="subtitle">Sudah Bersama</p>
+            <h2 class="years">2 Tahun</h2>
+            <div id="counter" class="counter"></div>
+            <p class="hearts-text">❤️❤️❤️❤️❤️</p>
+            <button id="open-btn">Buka Surat ❤️</button>
+        </div>
+    </section>
+
+    <!-- Halaman Utama (Surat & Galeri) -->
+    <section id="main-content" class="hidden">
+        
+        <!-- Foto Kalian (Header) -->
+        <div class="hero-image">
+            <img src="images/cover.jpg" alt="Our Cover">
+        </div>
+
+        <h1 class="title-font red-text">❤️ Happy 2nd Anniversary ❤️</h1>
+
+        <!-- Surat Animasi Mengetik -->
+        <div class="letter-box">
+            <p id="typing-text"></p>
+        </div>
+
+        <div class="divider">❤️</div>
+
+        <!-- Slideshow Otomatis -->
+        <div class="slideshow-container">
+            <img src="images/foto1.jpg" class="slide active">
+            <img src="images/foto2.jpg" class="slide">
+            <img src="images/foto3.jpg" class="slide">
+        </div>
+
+        <div class="divider">❤️</div>
+
+        <!-- Timeline -->
+        <div class="timeline-container">
+            <h2 class="title-font">Our Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date"> 22 Juni 2024</div>
+                    <div class="timeline-content">First chat</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date"> Agustus 2024</div>
+                    <div class="timeline-content">First date</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">4 Juli 2026</div>
+                    <div class="timeline-content">Anniversary</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Galeri Foto -->
+        <div class="gallery-container">
+            <h2 class="title-font">📸 Memories</h2>
+            <div class="gallery-grid">
+                <img src="images/foto1.jpg" alt="Memory 1">
+                <img src="images/foto2.jpg" alt="Memory 2">
+                <img src="images/foto3.jpg" alt="Memory 3">
+                <img src="images/foto4.jpg" alt="Memory 4">
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <h2 class="title-font red-text">I choose you</h2>
+            <p>Yesterday ❤️</p>
+            <p>Today ❤️</p>
+            <p>Tomorrow ❤️</p>
+            <p>Forever ❤️</p>
+            <p class="signature">Made with ❤️ by Farhan</p>
+        </div>
+        
+    </section>
+
+    <!-- Wadah untuk animasi hati melayang -->
+    <div id="floating-hearts"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+/* Reset & Basic Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff0f3;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.title-font {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+}
+
+.red-text { color: #d90429; }
+.hidden { display: none !important; }
+
+/* Tombol Musik Floating */
+#music-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #ffb3c1;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-family: inherit;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 100;
+    cursor: pointer;
+}
+
+/* --- COVER SECTION --- */
+#cover {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Ganti background cover di sini jika ingin pakai gambar */
+    background: linear-gradient(rgba(255, 179, 193, 0.8), rgba(255, 179, 193, 0.8)), url('images/cover.jpg') center/cover;
+}
+
+.cover-content h1 {
+    color: #c9184a;
+    margin-bottom: 10px;
+}
+
+.subtitle { font-size: 1.2rem; margin-top: 20px; }
+.years { font-size: 2rem; color: #d90429; margin: 5px 0 15px 0; }
+.counter { font-size: 1.1rem; font-weight: 600; margin-bottom: 20px; line-height: 1.8; }
+.hearts-text { margin-bottom: 30px; font-size: 1.5rem; }
+
+#open-btn {
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+    transition: transform 0.2s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+#open-btn:active { transform: scale(0.95); }
+
+/* --- MAIN CONTENT --- */
+#main-content {
+    text-align: center;
+    padding: 0 0 50px 0;
+    background-color: #fff0f3;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.letter-box {
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.6;
+    min-height: 150px;
+}
+
+/* Cursor Mengetik */
+.cursor {
+    display: inline-block;
+    width: 2px;
+    background-color: #d90429;
+    margin-left: 2px;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+.divider { font-size: 1.5rem; margin: 30px 0; }
+
+/* Slideshow */
+.slideshow-container {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.slide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.slide.active { opacity: 1; }
+
+/* Timeline */
+.timeline-container { margin: 40px 0; }
+.timeline {
+    border-left: 3px solid #ff4d6d;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 400px;
+    text-align: left;
+    padding-left: 20px;
+}
+.timeline-item {
+    position: relative;
+    margin-bottom: 25px;
+}
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -28.5px;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border: 3px solid #ff4d6d;
+    border-radius: 50%;
+}
+.timeline-date { font-weight: 600; color: #d90429; font-size: 0.9rem; }
+.timeline-content { background: white; padding: 10px 15px; border-radius: 8px; margin-top: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+
+/* Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+}
+.gallery-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Footer */
+.footer { margin-top: 50px; padding: 20px; }
+.footer p { margin: 5px 0; font-weight: 600; }
+.signature { margin-top: 25px !important; font-family: 'Dancing Script', cursive; font-size: 1.5rem; color: #ff4d6d; }
+
+/* Animasi Hati Melayang */
+.heart {
+    position: fixed;
+    bottom: -10vh;
+    font-size: 1.5rem;
+    animation: floatUp 4s linear forwards;
+    z-index: 9999;
+}
+@keyframes floatUp {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-110vh) scale(1.5); opacity: 0; }
+}
